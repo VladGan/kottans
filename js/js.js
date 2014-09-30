@@ -109,7 +109,7 @@
 	function print_matrix(w,q,answer)
 	{
 		var string = '';
-		string += "<img src = 'bracket_l.png' >";
+		string += "<img src = 'img/bracket_l.png' >";
 		string += "<div class='matrix'>";
 		string += "<div class='equations'>";
 		for (var i = 0; i<4; i++)
@@ -140,7 +140,7 @@
 			string +="</span>";
 		}
 		string += "</div>";
-		string += "<img src = 'vertical_bracket.png' style='height:90px; left:-30px;'>";
+		string += "<img src = 'img/vertical_bracket.png' style='height:90px; left:-30px;'>";
 		//string += "<span class = 'answers'>";
 
 		//for (var i = 0; i<4; i++)
@@ -148,7 +148,7 @@
 
 		string += "</span>";
 		string += "</div>";
-		string += "<img src = 'bracket_r.png' >";
+		string += "<img src = 'img/bracket_r.png' >";
 		if (q)
 			string+="<span class = 'tilda'>&approx;</span>";
 		document.getElementById("all_m").innerHTML += string;
@@ -158,7 +158,7 @@
 	function print_answers(x)
 	{
 		var string = '<div class = "answer_matrix" id = "ans_mas"><span class = "answer_x">X = </span>';
-		string += "<img src = 'bracket_l.png' style = 'padding-left:35px;'>";
+		string += "<img src = 'img/bracket_l.png' style = 'padding-left:35px;'>";
 		string += "<div class='matrix'>";
 		string += "<div class='equations'>";
 		for (var i = 0; i<4; i++)
@@ -170,7 +170,7 @@
 		}
 		string += "</div>";
 		string += "</div>";
-		string += "<img src = 'bracket_r.png' ></div>";
+		string += "<img src = 'img/bracket_r.png' ></div>";
 
 		document.getElementById("cout").innerHTML += string;
 
@@ -225,7 +225,7 @@
 	function print_E(x)
 	{
 		var string = '<div class = "answer_matrix" id = "e_mas"><span class = "answer_x">E = </span>';
-		string += "<img src = 'bracket_l.png' style = 'padding-left:35px;'>";
+		string += "<img src = 'img/bracket_l.png' style = 'padding-left:35px;'>";
 		string += "<div class='matrix'>";
 		string += "<div class='equations'>";
 		for (var i = 0; i<4; i++)
@@ -241,7 +241,7 @@
 		}
 		string += "</div>";
 		string += "</div>";
-		string += "<img src = 'bracket_r.png' ></div>";
+		string += "<img src = 'img/bracket_r.png' ></div>";
 
 		document.getElementById("cout").innerHTML += string;
 	}
