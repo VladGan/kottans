@@ -79,7 +79,7 @@
 	function print_solutions(w,answer)
 	{
 		var string = '<div class = "solutions" id = "sol">';
-		var x = new Array(n);
+		var x = new Array(4);
 		for (var i=3; i>=0; i--)
 		{
 			var sum = 0;
