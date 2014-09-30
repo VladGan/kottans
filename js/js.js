@@ -1,4 +1,4 @@
-	var n = 4,m = 4,start_matrix,start_ans;
+	var start_matrix,start_ans;
 
 	function det(w)
 	{
@@ -88,7 +88,7 @@
 			for (var j = i+1; j<n; j++)
 			{
 				sum+=w[i][j]*x[j];
-				if (j<n-1)
+				if (j<3)
 					sum_string+=w[i][j].toFixed(2).toString() + "*x" + "<sub>"+(j+1).toString()+"</sub>" + "+";
 				else
 					sum_string+=w[i][j].toFixed(2).toString() + "*x" + "<sub>"+(j+1).toString()+"</sub>";
@@ -141,10 +141,6 @@
 		}
 		string += "</div>";
 		string += "<img src = 'img/vertical_bracket.png' style='height:90px; left:-30px;'>";
-		//string += "<span class = 'answers'>";
-
-		//for (var i = 0; i<4; i++)
-		//	string += answer[i].toString() + "<br>";
 
 		string += "</span>";
 		string += "</div>";
@@ -178,11 +174,11 @@
 
 	function Build()
 	{
-		for (var j = 0; j < m; j++)
+		for (var j = 0; j < 4; j++)
 		{
 			var string = "<span class = 'equation'>";
 			
-			for (var i = 0; i < n; i++)
+			for (var i = 0; i < 4; i++)
 			{
 				var id = (j).toString() +"_" + (i).toString();
 				string += "<input class = 'x' id ='"+id+"'>x" + (i+1).toString();
@@ -195,7 +191,7 @@
 	function make_column(i,w,answer) {
 
 		var max = 0, max_j;
-		for (j = i; j < m; j++)
+		for (j = i; j < 4; j++)
 			if (Math.abs(w[j][i])>=max)
 			{
 				max = Math.abs(w[j][i]);
@@ -210,11 +206,11 @@
 		answer[i] = answer[max_j];
 		answer[max_j] = tmp;
 
-		for (j = i+1; j<m; j++)
+		for (j = i+1; j<4; j++)
 		{
 			if (w[j][i]!=0){
 				var kof = w[j][i]/w[i][i];
-				for (k = i; k<n; k++)
+				for (k = i; k<4; k++)
 					w[j][k] = (w[j][k] - w[i][k] * kof);
 				answer[j] -= answer[i] * kof;
 			}
@@ -250,9 +246,9 @@
 		//document.getElementById("cout").innerHTML = '';
 		if (determinant(w))
 		{
-			for (var i = 0; i < n; i++)
+			for (var i = 0; i < 4; i++)
 			{
-				print_matrix(w,i != n-1,answer);
+				print_matrix(w,i != 3,answer);
 				make_column(i,w,answer);
 			}
 			write("</div>");
@@ -274,15 +270,15 @@
 	function SecondButton() {
 
 		document.getElementById("cout").innerHTML = '<div class = "all_matrix" id = "all_m"></div>';
-		var w = new Array(n);
-		var answer = new Array(n);
-		for (var i = 0; i < n; i++) 
-			w[i] = new Array(m);
+		var w = new Array(4);
+		var answer = new Array(4);
+		for (var i = 0; i < 4; i++) 
+			w[i] = new Array(4);
 
-		for (var i = 0; i < n; i++)
+		for (var i = 0; i < 4; i++)
 		{
 			var id;
-			for (var j = 0; j < m; j++)
+			for (var j = 0; j < 4; j++)
 			{
 				id = (i).toString() + "_" + (j).toString();
 				w[i][j] = parseFloat(document.getElementById(id).value);
