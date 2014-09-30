@@ -85,7 +85,7 @@
 			var sum = 0;
 			var sum_string = '';
 			string += '<span class="solution"> X<sub>'+(i+1).toString()+ '</sub> = ';
-			for (var j = i+1; j<n; j++)
+			for (var j = i+1; j<4; j++)
 			{
 				sum+=w[i][j]*x[j];
 				if (j<3)
