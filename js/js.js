@@ -1,14 +1,19 @@
 var start_matrix,start_ans;
 window.onload = function() {start();}
 
-function start()
+function start()//добавление обработчика событий на кнопки
 {
 	document.getElementById("button").addEventListener("click", function () {solve()});
 	document.getElementById("example_1").addEventListener("click", function () {fill(1);solve();});
 }
 
-function solve() {
-	document.getElementById("cout").innerHTML = '<div class = "all_matrix" id = "all_m"></div>';
+function write(s)//вывод строки s в cout (в ответ)
+{
+	document.getElementById("cout").innerHTML += s; 
+}
+
+function solve() { //считывание начальных данных, запуск основной функции
+	document.getElementById("cout").innerHTML = '<div class = "all_matrix" id = "all_m"></div>';//обнуление ответа
 	var w = new Array(4);
 	var answer = new Array(4);
 	for (var i = 0; i < 4; i++) 
@@ -34,41 +39,16 @@ function solve() {
 	document.getElementById("cout").style.display="block";
 }
 
-function GaussMethod(w,answer) {
-	if (determinant(w))
-	{
-		for (var i = 0; i < 4; i++)
-		{
-			print_matrix(w,i != 3,answer);
-			make_column(i,w,answer);
-		}
-		var x = print_solutions(w,answer);
-		print_answers(x);
-		print_E(x);
-	}
-	else
-		write("<span class = 'equation'>determinant vanishes. no solution</span>");
-	/*var width = document.getElementById('all_m').offsetWidth;
-	document.getElementById('sol').onload = function () {
-		document.getElementById('sol').style.width = width;
-	};
-	document.getElementById('e_mas').style.width = width;*/
-}
-
-
-function write(s)
-{
-	document.getElementById("cout").innerHTML += s;
-}
-
 function make_column(i,w,answer) {
 	var max = 0, max_j;
+
 	for (j = i; j < 4; j++)
 		if (Math.abs(w[j][i])>=max)
 		{
 			max = Math.abs(w[j][i]);
 			max_j = j;
 		}
+
 	var tmp = w[i];
 	w[i] = w[max_j];
 	w[max_j] = tmp;
@@ -85,6 +65,24 @@ function make_column(i,w,answer) {
 		}
 	}
 }
+
+
+function GaussMethod(w,answer) {//решение СЛАУ методом Гаусса с выбором основного элемента
+	if (determinant(w)) //единственное решение существует только в случае если детерминант равено 0
+	{
+		for (var i = 0; i < 4; i++)
+		{
+			print_matrix(w,i != 3,answer);//вывод матрицы 
+			make_column(i,w,answer);//поиск максимального элемента, замена текущего рядя на максимальный, обнуление нижних элементов
+		}
+		var x = print_solutions(w,answer);//вывод неизвестных
+		print_answers(x);//вывод матрицы Х
+		print_E(x);//вывод матрицы Е
+	}
+	else
+		write("<span class = 'equation'>determinant vanishes. no solution</span>");
+}
+
 
 
 
