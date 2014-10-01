@@ -59,7 +59,7 @@ function print_matrix(w,q,answer)
 		string +="</span>";
 	}
 	string += "</div>";
-	string += "<img src = 'img/vertical_bracket.png' style='height:90px; left:-30px;'>";
+	string += "<img src = 'img/vertical_bracket.png' style='height:90px; left:-46px;'>";
 	string += "</span>";
 	string += "</div>";
 	string += "<img src = 'img/bracket_r.png' >";
