@@ -83,13 +83,13 @@ function print_answers(x)
 	}
 	string += "</div>";
 	string += "</div>";
-	string += "<img src = 'img/bracket_r.png' ></div>";
+	string += "<img src = 'img/bracket_r.png' height ='92px' ></div>";
 	document.getElementById("cout").innerHTML += string;
 }
 function print_E(x)
 {
 	var string = '<div class = "answer_matrix" id = "e_mas"><span class = "answer_x">E = </span>';
-	string += "<img src = 'img/bracket_l.png' style = 'padding-left:35px;'>";
+	string += "<img src = 'img/bracket_l.png' style = 'padding-left:35px;height:92px;'>";
 	string += "<div class='matrix'>";
 	string += "<div class='equations'>";
 	for (var i = 0; i<4; i++)
@@ -105,6 +105,6 @@ function print_E(x)
 	}
 	string += "</div>";
 	string += "</div>";
-	string += "<img src = 'img/bracket_r.png' ></div>";
+	string += "<img src = 'img/bracket_r.png' height = '92px'' ></div>";
 	document.getElementById("cout").innerHTML += string;
 }
