@@ -12,10 +12,13 @@ function print_solutions(w,answer)
 		{
 			sum+=w[i][j]*x[j];
 			if (j<3)
-				sum_string+=w[i][j].toFixed(2).toString() + "*x" + "<sub>"+(j+1).toString()+"</sub>" + "+";
+				sum_string+=w[i][j].toFixed(2).toString() + "*X" + "<sub>"+(j+1).toString()+"</sub>" + "+";
 			else
-				sum_string+=w[i][j].toFixed(2).toString() + "*x" + "<sub>"+(j+1).toString()+"</sub>";
+				sum_string+=w[i][j].toFixed(2).toString() + "*X" + "<sub>"+(j+1).toString()+"</sub>";
 		}
+		while (sum_string.replace("+-","-")!=sum_string) // исправление выражений вида +-2 на -2
+			sum_string = sum_string.replace("+-","-");
+
 		x[i] = (answer[i] - sum) / w[i][i];
 		if (i!=3)
 			string+= "(" + answer[i].toFixed(2).toString()+" - ("+sum_string + ")) / " + w[i][i].toFixed(2).toString();
