@@ -34,6 +34,9 @@ function print_matrix(w,q,answer)
 	for (var i = 0; i<4; i++)
 		for (var j = 0; j<4; j++)
 			if ((w[i][j]).toFixed(2).toString().length > max_length) max_length = (w[i][j]).toFixed(2).toString().length;
+
+	for (var i = 0; i<4; i++)
+		if (answer[i].toFixed(2).toString().length > max_length) max_length = (answer[i]).toFixed(2).toString().length;
 	var ml_str = (max_length*9).toString();
 	console.log(max_length);
 
@@ -78,6 +81,11 @@ function print_matrix(w,q,answer)
 	
 function print_answers(x)
 {
+	var max_length = 0;
+	for (var i = 0; i<4; i++)
+		if (x[i].toFixed(2).toString().length > max_length) max_length = (x[i]).toFixed(2).toString().length;
+	var ml_str = (max_length*9).toString();
+
 	var string = '<div class = "answer_matrix" id = "ans_mas"><span class = "answer_x">X = </span>';
 	string += "<img src = 'img/bracket_l.png' style = 'padding-left:35px;'>";
 	string += "<div class='matrix'>";
@@ -91,9 +99,10 @@ function print_answers(x)
 	}
 	string += "</div>";
 	string += "</div>";
-	string += "<img src = 'img/bracket_r.png' height ='92px' ></div>";
+	string += "<img src = 'img/bracket_r.png' style = 'height:92px;padding-left:"+(parseInt(ml_str)-35).toString()+"px;'></div>";
 	document.getElementById("cout").innerHTML += string;
 }
+
 function print_E(x)
 {
 	var string = '<div class = "answer_matrix" id = "e_mas"><span class = "answer_x">E = </span>';
