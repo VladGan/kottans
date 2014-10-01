@@ -1,6 +1,6 @@
 function fill(i)
 {
-	if (i == 1)
+	if (i == 1)//тест из условия
 	{
 		document.getElementById("0_0").value = 0;
 		document.getElementById("0_1").value = 1;

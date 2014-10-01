@@ -1,3 +1,4 @@
+//генерирование ответов
 function print_solutions(w,answer)
 {
 	var string = '<div class = "solutions" id = "sol">';
@@ -30,22 +31,21 @@ function print_solutions(w,answer)
 function print_matrix(w,q,answer)
 {
 	var string = '';
-	var max_length = 0;
-	for (var i = 0; i<4; i++)
+	var max_length = 0;//максимальная длина числа (нужна для выбора размерности клетки матрицы)
+	for (var i = 0; i<4; i++)//поиск самого длинного числа
 		for (var j = 0; j<4; j++)
 			if ((w[i][j]).toFixed(2).toString().length > max_length) max_length = (w[i][j]).toFixed(2).toString().length;
 
-	for (var i = 0; i<4; i++)
+	for (var i = 0; i<4; i++)//поиск самого длинного числа
 		if (answer[i].toFixed(2).toString().length > max_length) max_length = (answer[i]).toFixed(2).toString().length;
 	var ml_str = (max_length*9).toString();
-	console.log(max_length);
+
 
 	string += "<img src = 'img/bracket_l.png' >";
 	string += "<div class='matrix'>";
 	string += "<div class='equations'>";
 	for (var i = 0; i<4; i++)
 	{
-		var was = false;
 		string +="<span class = 'equation'>";
 		for (var j = 0; j<4; j++)
 			if ((Math.abs(w[i][j]).toFixed(2))%1 == 0)
@@ -81,8 +81,9 @@ function print_matrix(w,q,answer)
 	
 function print_answers(x)
 {
-	var max_length = 0;
-	for (var i = 0; i<4; i++)
+	var max_length = 0;//максимальная длина числа (нужна для выбора размерности клетки матрицы)
+
+	for (var i = 0; i<4; i++)//поиск самого длинного числа
 		if (x[i].toFixed(2).toString().length > max_length) max_length = (x[i]).toFixed(2).toString().length;
 	var ml_str = (max_length*9).toString();
 
@@ -92,7 +93,6 @@ function print_answers(x)
 	string += "<div class='equations'>";
 	for (var i = 0; i<4; i++)
 	{
-		var was = false;
 		string +="<span class = 'equation'>";
 		string += "<span class = 'variable' style = 'padding: 0px 20px 0px 0px;'>" + (x[i]).toFixed(2).toString() + "</span>";
 		string += "</span>";
@@ -111,7 +111,6 @@ function print_E(x)
 	string += "<div class='equations'>";
 	for (var i = 0; i<4; i++)
 	{
-		var was = false;
 		var sum = 0;
 		string +="<span class = 'equation'>";
 		for (var j = 0; j<4; j++)

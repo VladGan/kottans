@@ -1,4 +1,4 @@
-function det(w)
+function det(w)//вычисление определителей миноров (матриц 3х3)
 	{
 		var ans = 0;
 
@@ -34,7 +34,7 @@ function det(w)
 		return (ans);
 	}
 
-function minor(w,i)
+function minor(w,i)//генерация миноров
 {
 	var k = 0, l = 0;
 	var arr = new Array(3);
@@ -58,6 +58,6 @@ function determinant(w)
 {
 	var ans = 0;
 	for (var i = 0; i<4; i++)
-		ans += Math.pow(-1, i) * minor(w,i) * w[0][i];
+		ans += Math.pow(-1, i) * minor(w,i) * w[0][i];//поиск детерминанта путём разложения по первой строке
 	return (ans != 0)
 }
