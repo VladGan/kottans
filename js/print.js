@@ -116,7 +116,7 @@ function print_E(x)
 		for (var j = 0; j<4; j++)
 			sum += start_matrix[i][j] * x[j];
 		var result = start_ans[i] - sum;
-		string += "<span class = 'variable' style = 'padding: 0px 20px 0px 0px;'>" + (result).toFixed(2).toString() + "</span>";
+		string += "<span class = 'variable' style = 'padding: 0px 200px 0px 0px;'>" + (result).toFixed(20).toString() + "</span>";
 		string += "</span>";
 	}
 	string += "</div>";

@@ -54,9 +54,12 @@ function make_column(i,w,answer) {
 	var tmp = w[i];
 	w[i] = w[max_j];
 	w[max_j] = tmp;
+
 	var tmp = answer[i];
 	answer[i] = answer[max_j];
 	answer[max_j] = tmp;
+
+
 	for (j = i+1; j<4; j++)
 	{
 		if (w[j][i]!=0){
