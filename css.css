@@ -212,6 +212,7 @@ img
 	display: inline-block;
 	padding-bottom: 10px;
 	border-bottom: 2px solid #B7F760;
+	width: 1400px;
 }
 
 .solution
@@ -227,6 +228,7 @@ img
 	padding-bottom: 10px;
 	position: relative;
 	border-bottom: 2px solid #B7F760;
+	width: 1400px;
 }
 
 .answer_matrix{
@@ -235,6 +237,7 @@ img
 	padding-bottom: 10px;
 	position: relative;
 	border-bottom: 2px solid #B7F760;
+	width: 1400px;
 }
 
 .answer_x
