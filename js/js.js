@@ -79,7 +79,7 @@ function GaussMethod(w,answer) {//решение СЛАУ методом Гау�
 		}
 		var x = print_solutions(w,answer);//вывод неизвестных
 		print_answers(x);//вывод матрицы Х
-		print_E(x);//вывод матрицы Е
+		print_E(x);//вывод матрицы Е (проверка на правильность решения)
 	}
 	else
 		write("<span class = 'equation'>determinant vanishes. no solution</span>");

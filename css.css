@@ -111,7 +111,7 @@ table {
 	white-space: nowrap;
 	overflow-x: scroll;
 	padding-bottom: 15px;
-	height: 600px;
+	height: 500px;
 }
 
 ::-webkit-scrollbar {
@@ -244,4 +244,9 @@ img
 	margin-top: 40px;
 	font-size: 22px;
 
+}
+
+.example
+{
+	position: absolute;
 }
