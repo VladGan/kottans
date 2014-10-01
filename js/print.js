@@ -30,6 +30,13 @@ function print_solutions(w,answer)
 function print_matrix(w,q,answer)
 {
 	var string = '';
+	var max_length = 0;
+	for (var i = 0; i<4; i++)
+		for (var j = 0; j<4; j++)
+			if ((w[i][j]).toFixed(2).toString().length > max_length) max_length = (w[i][j]).toFixed(2).toString().length;
+	var ml_str = (max_length*9).toString();
+	console.log(max_length);
+
 	string += "<img src = 'img/bracket_l.png' >";
 	string += "<div class='matrix'>";
 	string += "<div class='equations'>";
@@ -41,12 +48,13 @@ function print_matrix(w,q,answer)
 			if ((Math.abs(w[i][j]).toFixed(2))%1 == 0)
 			{
 				if (Math.abs(w[i][j]).toFixed(2) == -0)
-					string += "<span class = 'variable'>" + (Math.abs(w[i][j])).toFixed(0).toString() + "</span>";
+					string += "<span class = 'variable' style = ' width:"+ ml_str+"px;'>" + (Math.abs(w[i][j])).toFixed(0).toString() + "</span>";
 				else
-					string += "<span class = 'variable'>" + (w[i][j]).toFixed(0).toString() + "</span>";
+					string += "<span class = 'variable' style = ' width:"+ ml_str+"px;'>" +  (w[i][j]).toFixed(0).toString() + "</span>";
 			}
 			else
-				string+= "<span class = 'variable'>"+w[i][j].toFixed(2).toString() + "</span>";
+				string+= "<span class = 'variable' style = ' width:"+ ml_str+"px;'>" + w[i][j].toFixed(2).toString() + "</span>";
+
 		string += "<span class = 'variable'>";
 		if ((Math.abs(answer[i]).toFixed(2))%1 == 0)
 			{
@@ -62,7 +70,7 @@ function print_matrix(w,q,answer)
 	string += "<img src = 'img/vertical_bracket.png' style='height:90px; left:-46px;'>";
 	string += "</span>";
 	string += "</div>";
-	string += "<img src = 'img/bracket_r.png' >";
+	string += "<img src = 'img/bracket_r.png' style='padding-left:"+(parseInt(ml_str)-55).toString()+"px;'>";
 	if (q)
 		string+="<span class = 'tilda'>&approx;</span>";
 	document.getElementById("all_m").innerHTML += string;

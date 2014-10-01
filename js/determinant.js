@@ -58,9 +58,6 @@ function determinant(w)
 {
 	var ans = 0;
 	for (var i = 0; i<4; i++)
-	{
 		ans += Math.pow(-1, i) * minor(w,i) * w[0][i];
-		console.log(Math.pow(-1, i) * minor(w,i),Math.pow(-1, i), minor(w,i));
-	}
 	return (ans != 0)
 }
