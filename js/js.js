@@ -5,6 +5,8 @@ function start()//добавление обработчика событий н�
 {
 	document.getElementById("button").addEventListener("click", function () {solve()});
 	document.getElementById("example_1").addEventListener("click", function () {fill(1);solve();});
+	document.getElementById("example_2").addEventListener("click", function () {fill(2);solve();});
+	document.getElementById("example_3").addEventListener("click", function () {fill(3);solve();});
 }
 
 function write(s)//вывод строки s в cout (в ответ)

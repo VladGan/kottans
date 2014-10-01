@@ -73,7 +73,7 @@ function print_matrix(w,q,answer)
 	string += "<img src = 'img/vertical_bracket.png' style='height:90px; left:-46px;'>";
 	string += "</span>";
 	string += "</div>";
-	string += "<img src = 'img/bracket_r.png' style='padding-left:"+(parseInt(ml_str)-55).toString()+"px;'>";
+	string += "<img src = 'img/bracket_r.png' style='padding-left:"+(parseInt(ml_str)-50).toString()+"px;'>";
 	if (q)
 		string+="<span class = 'tilda'>&approx;</span>";
 	document.getElementById("all_m").innerHTML += string;
