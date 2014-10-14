@@ -152,7 +152,7 @@ img
 	width: auto;
 }
 
-.button,.button2 {
+.button,.button2, .button3 {
 	background-color:#cae092;
 	text-indent:0px;
 	display:inline-block;
@@ -178,11 +178,19 @@ img
 	position:relative;
 	top:1px;
 }
-.button2
+.button2, .button3
 {
 	left:20px;
 	position:relative;
 	margin-left: inherit;
+}
+.button3
+{
+	background-color:#FF7878;
+}
+.button3:hover
+{
+	background-color:#FD8A8D;
 }
 
 ::-webkit-input-placeholder {
