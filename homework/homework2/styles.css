@@ -135,43 +135,50 @@ table
 
 body
 {
-	background-color: #D4F4D1;
+    background-color: #d4f4d1;
 }
 
-h3{
-	font-weight: bold;
-	font-family: sans-serif;
+h3
+{
+    font-family: sans-serif;
+    font-weight: bold;
 }
 
 p:first-letter
 {
-	font-size: 24px;
+    font-size: 24px;
 }
 
-a{
-	color: #836CBF;
-}
-
-a:hover{
-	color: black;
-
-}
-
-nav a{
-	color: #FFAC54;
-}
-.paragraph 
+a
 {
-	background-color: green;
-	position: relative;
+    color: #836cbf;
+}
+
+a:hover
+{
+    color: black;
+}
+
+nav a
+{
+    color: #ffac54;
+}
+.paragraph
+{
+    position: relative;
+
+    background-color: green;
 }
 
 .paragraph:before
 {
-	content: "";
-	width:50%;
-	height: 100%;
-	background-color: yellow;
-	position: absolute;
-	opacity: 0.3;
+    position: absolute;
+
+    width: 50%;
+    height: 100%;
+
+    content: '';
+
+    opacity: .3;
+    background-color: yellow;
 }
