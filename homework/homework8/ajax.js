@@ -1,9 +1,8 @@
 var token;
 
 $(document).ready(function() {
-
 	$('small').hide();
-
+	$('.aut-span').hide();
 	function GetFullInfo(){
 		var adress = "http://api.sudodoki.name:8888/user/" + $(this).attr('id');
 		$.ajax({
@@ -82,6 +81,7 @@ $(document).ready(function() {
 			if($($('input')[i]).attr('type') != "button") $($('input')[i]).attr('class','');
 		}
 		token = dat.token;
+		$('.aut-span').show();
 		alert(dat.status);
 	}
 
