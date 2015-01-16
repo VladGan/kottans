@@ -46,3 +46,8 @@ body > header a:last-child:after {
   display: block;
   font-size: 40px;
 }
+
+img{
+  display: block;
+  padding-left: 100px;
+}

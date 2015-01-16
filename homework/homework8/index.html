@@ -38,12 +38,13 @@
         <div class="row">
           <div class="column small-offset-1 small-10 large-offset-2 large-8">
             <h1>Login</h1>
-            <form method="post" action="http://localhost:8888/login" class="small-8">
-              <input class="error" name="login" type="text" placeholder="enter your login">
-              <small class="error">Something went wrong!</small>
+            <form id = "form1" method="post" class="small-8">
+              <input name="login" type="text" placeholder="enter your login">
+              <small class="error" name="login">Something went wrong!</small>
+
               <input name="password" type="password" placeholder="enter your password">
-              <input type="submit" value="Log me in" class="button">
-              <a href="/signup" class="button secondary">Sign me up</a>
+              <input type="button" id = "button-login" value="Log me in" class="button">
+              <a href="#" class="button secondary">Sign me up</a>
             </form>
           </div>
         </div>
@@ -53,14 +54,22 @@
       <div class="row">
         <div class="column small-offset-1 small-10 large-offset-2 large-8">
           <h1>Signup</h1>
-          <form method="post" action="http://localhost:8888/signup" class="small-8">
-            <input class="error" name="login" type="text" placeholder="enter your login">
-            <small class="error">Something went wrong!</small>
+          <form id="form2" method="post" action="http://api.sudodoki.name:8888/signup" class="small-8">
+
+            <input class="" name="login" type="text" placeholder="enter your login">
+            <small class="error" name="login">Something went wrong!</small>
+
             <input name="email" type="email" placeholder="enter your email">
+            <small class="error" name="email">Something went wrong!</small>
+
             <input name="password" type="password" placeholder="enter your new password">
+            <small class="error" name="password">Something went wrong!</small>
+
             <input name="passwordConfirmation" type="password" placeholder="retype it">
-            <input type="submit" value="Let me in!" class="button">
-            <a href="/login" class="button secondary">Nah, I do have an account already.</a>
+            <small class="error" name="passwordConfirmation">Something went wrong!</small>
+
+            <input type="button"  id = "button-signup" value="Let me in!" class="button">
+            <a href="#" class="button secondary">Nah, I do have an account already.</a>
           </form>
         </div>
       </div>
@@ -68,38 +77,23 @@
     <hr>
     <div id="list">
       <ul class="small-block-grid-3">
-      <li>
-        <div class="person male">
-          <a class='url n' href="#show-full"><i>Mr.</i> Know-it-all, I</a>
-        </div>
-      </li>
-      <li>
-        <div class="person female">
-          <a class='url n' href="#show-full"><i>Mrs.</i> Did-it, Been-there</a>
-        </div>
-      </li>
-      <li>
-        <div class="person male">
-          <a class='url n' href="#show-full"><i>Mr.</i> Real Fun.</a>
-        </div>
-      </li>
+          <img id="spinner1" src="ajax-loader.gif" alt="AJAX loader animation">
       </ul>
     </div>
     <hr>
     <div id="show-full">
       <div>
-      <img src="ajax-loader.gif" alt="AJAX loader animation">
       <h2>Mr. Know-it-all, I</h2>
       <section>
         <h3>Location</h3>
-        Street: 1212 mullholand drive, hollywood, LA, 12312
+        <span class="location">Street: 1212 mullholand drive, hollywood, LA, 12312</span>
       </section>
       <section>
         <h3>Connect with him!</h3>
-        <a href="mailto:knowitall@whitehouse.gov">knowitall@whitehouse.gov</a>
+        <span class="adress"><a href="mailto:knowitall@whitehouse.gov">knowitall@whitehouse.gov</a></span>
 
         <br/>
-        <a href="tel:38(098)#102">38(098)9991613</a>
+        <span class="tel"><a href="tel:38(098)#102">38(098)9991613</a></span>
       </section>
       </div>
     </div>
