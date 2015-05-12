@@ -1,0 +1,263 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong,  sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+.all
+{
+	width: 100%;
+	font-family: 'Open Sans', sans-serif;
+	background-color: rgba(213,255,155,0.4);
+}
+.equation
+{
+	display: block;
+	font-size:18px;
+	text-align: center;
+	padding-top: 5px;
+}
+.variable:last-child
+{
+	padding-left: 35px;
+	width: 22px;
+}
+
+.equations
+{
+	display: inline-block;
+}
+.x {
+	margin:0px 3px;
+}
+.first_form
+{
+	display: block;
+	height:100px;
+	width:200px;
+	padding-bottom: 100px;
+	position: absolute;
+
+}
+
+.second_form
+{
+	display: block;
+	height:100px;
+	/* position: absolute; */
+	margin-left: auto;
+	margin-right: auto;
+	width: 300px;
+	padding-top: 50px;
+}
+
+.form2
+{
+	display: inline;
+}
+
+.x
+{
+	width: 20px;
+	display: inline;
+}
+
+.cout
+{
+	position: relative;
+	top:100px;
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	white-space: nowrap;
+	overflow-x: scroll;
+	padding-bottom: 15px;
+	height: 520px;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,1); 
+}
+ 
+::-webkit-scrollbar-thumb {
+    background: rgba(138,132,132,0.3);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(138,132,132,0.8);
+}
+.matrix
+{
+	display: inline-block;
+	padding-bottom: 3px;
+}
+
+img 
+{
+	padding: 0 5 0 5;
+	position: relative;
+	top: 5px;
+	height: 92px;
+}
+
+.tilda{
+	font-size: 25px;
+	font-weight: bold;
+	padding: 0 5 0 5;
+	line-height: 100px;
+	vertical-align: top;
+	display: inline-block;
+	width: auto;
+}
+
+.button,.button2, .button3 {
+	background-color:#cae092;
+	text-indent:0px;
+	display:inline-block;
+	color:#ffffff;
+	font-family: 'Open Sans', sans-serif;
+	font-size:19px;
+	font-weight:bold;
+	font-style:normal;
+	cursor: pointer;
+	height:37px;
+	line-height:37px;
+	width:100px;
+	text-decoration:none;
+	text-align:center;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	margin-top: 20px;
+
+}.button,.button2:hover {
+	background-color:#cdeb86;
+}.button,.button2:active {
+	position:relative;
+	top:1px;
+}
+.button2, .button3
+{
+	left:20px;
+	position:relative;
+	margin-left: inherit;
+}
+.button3
+{
+	background-color:#FF7878;
+}
+.button3:hover
+{
+	background-color:#FD8A8D;
+}
+
+::-webkit-input-placeholder {
+	color: rgba(0, 0, 0, 0.2);
+}
+:-moz-placeholder {
+    color: rgba(0, 0, 0, 0.2);
+}
+::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.2);
+}
+:-ms-input-placeholder {  
+   color: rgba(0, 0, 0, 0.2);
+}
+
+.answers
+{
+	position: relative;
+	display: inline-block;
+}
+.variable
+{
+    display: inline-block;
+}
+.all_matrix
+{
+	display: inline-block;
+	padding-bottom: 10px;
+	border-bottom: 2px solid #B7F760;
+	width: 1400px;
+}
+
+.solution
+{
+	display: block;
+	padding: 5px;
+}
+
+.solutions
+{
+	display: block;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	position: relative;
+	border-bottom: 2px solid #B7F760;
+	width: 1400px;
+}
+
+.answer_matrix{
+	display: block;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	position: relative;
+	border-bottom: 2px solid #B7F760;
+	width: 1400px;
+}
+
+.answer_x
+{
+	display: block;
+	position: absolute;
+	margin-top: 40px;
+	font-size: 22px;
+
+}
+
+.example
+{
+	position: absolute;
+}

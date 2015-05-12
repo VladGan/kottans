@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]><html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]><html class="no-js ie7 oldie" lang="en"><![endif]-->
+<!--[if IE 8]><html class="no-js ie8 oldie" lang="en"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>MATCH KILLAR!</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="foundation.css">
+
+</head>
+  <body>
+  
+  <nav class="top-bar" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+        <h1><a href="#">Hot Date!</a></h1>
+      </li>
+    </ul>
+
+    <section class="top-bar-section">
+      <ul class="left">
+        <li class="active"><a href="#login">Login</a></li>
+        <li><a href="#signup">Signup</a></li>
+        <li><a href="#list">List my dates!</a></li>
+        <li>
+          <span class='aut-span'>
+            <a class="tooltips" href="#">
+              <img src="aut.png" style="display: inline-block;height: 21px; padding:0px;"></img>
+              <span>You are logged in!</span>
+            </a>
+          </span>
+        </li>
+      </ul>
+      <ul class="right">
+        
+      </ul>
+    </section>
+  </nav>
+
+    <div id="login">
+        <div class="row">
+          <div class="column small-offset-1 small-10 large-offset-2 large-8">
+            <h1>Login</h1>
+            <form id = "form1" method="post" class="small-8">
+              <input name="login" type="text" placeholder="enter your login">
+              <small class="error" name="login">Something went wrong!</small>
+
+              <input name="password" type="password" placeholder="enter your password">
+              <input type="button" id = "button-login" value="Log me in" class="button">
+              <a href="#" class="button secondary">Sign me up</a>
+            </form>
+          </div>
+        </div>
+    </div>
+    <hr>
+    <div id="signup">
+      <div class="row">
+        <div class="column small-offset-1 small-10 large-offset-2 large-8">
+          <h1>Signup</h1>
+          <form id="form2" method="post" action="http://api.sudodoki.name:8888/signup" class="small-8">
+
+            <input class="" name="login" type="text" placeholder="enter your login">
+            <small class="error" name="login">Something went wrong!</small>
+
+            <input name="email" type="email" placeholder="enter your email">
+            <small class="error" name="email">Something went wrong!</small>
+
+            <input name="password" type="password" placeholder="enter your new password">
+            <small class="error" name="password">Something went wrong!</small>
+
+            <input name="passwordConfirmation" type="password" placeholder="retype it">
+            <small class="error" name="passwordConfirmation">Something went wrong!</small>
+
+            <input type="button"  id = "button-signup" value="Let me in!" class="button">
+            <a href="#" class="button secondary">Nah, I do have an account already.</a>
+          </form>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div id="list">
+      <ul class="small-block-grid-3">
+          <img id="spinner1" src="ajax-loader.gif" alt="AJAX loader animation">
+      </ul>
+    </div>
+    <hr>
+    <div id="show-full">
+      <div>
+      <h2>Mr. Know-it-all, I</h2>
+      <section>
+        <h3>Location</h3>
+        <span class="location">Street: 1212 mullholand drive, hollywood, LA, 12312</span>
+      </section>
+      <section>
+        <h3>Connect with him!</h3>
+        <span class="adress"><a href="mailto:knowitall@whitehouse.gov">knowitall@whitehouse.gov</a></span>
+
+        <br/>
+        <span class="tel"><a href="tel:38(098)#102">38(098)9991613</a></span>
+      </section>
+      </div>
+    </div>
+    <!--[if lt IE 7]><script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script><script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script><![endif]-->
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   <script src="ajax.js"></script>
+  </body>
+</html>
+
+<!-- <div id="your section">
+      <header>
+        <a href="logout">Log out</a>
+      </header>
+      <div id="main" role="main">
+
+      </div>
+      <footer>
+
+      </footer>
+    </div> -->
+
+
+
+
+

@@ -1,0 +1,110 @@
+body > header a:after {
+  content: '|';
+  color: black;
+  margin: 0 15px 0 15px;
+}
+
+body > header a:last-child:after {
+  content: '';
+}
+
+.person {
+  height: auto;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 20px;
+  position: relative;
+}
+.person a {
+  padding-top: 40px;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+}
+.person.male {
+  border-color: blue;
+}
+
+.person.female {
+  border-color: pink;
+}
+.person.male:before {
+  content: '♂';
+  color: blue;
+}
+.person.female:before {
+  content: '♀';
+  color: pink;
+  font-weight: 800;
+}
+.person:before {
+  position: absolute;
+  top: 0;
+  text-align: center;
+  left: 0;
+  right: 0;
+  display: block;
+  font-size: 40px;
+}
+
+img{
+  display: block;
+  padding-left: 100px;
+}
+
+.aut-span{
+  line-height: 45px;
+  height: 45px;
+}
+
+a.tooltips {
+  position: relative;
+  display: inline;
+}
+.tooltips:hover{
+  background: #333333!important;
+}
+
+a.tooltips span {
+  position: absolute;
+  width:100px;
+  color:#FFFFFF;
+  background: #333333;
+  border: 1px solid #FFFFFF;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  visibility: hidden;
+  border-radius: 5px;
+  font-size: 10px;
+}
+a.tooltips span:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -10px;
+  width: 0; height: 0;
+  border-right: 10px solid #FFFFFF;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+a.tooltips span:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -8px;
+  width: 0; height: 0;
+  border-right: 8px solid #333333;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+a:hover.tooltips span {
+  visibility: visible;
+  left: 100%;
+  top: 50%;
+  margin-top: -14px;
+  margin-left: 15px;
+  z-index: 999;
+}
